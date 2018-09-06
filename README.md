@@ -26,4 +26,4 @@ contextec@disroot.org | lreyna@utm.edu.ec
 Portoviejo, Manabí, Ecuador
 ```
 
-![Logo UTM](./talleres/figuras/utm_logo.png)
+[![Logo UTM](www.utm.edu.ec)](./talleres/figuras/utm_logo.png)
