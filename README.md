@@ -31,3 +31,5 @@ contextec@disroot.org
 
 ## [Talleres](./talleres/talleres.md)
 
+## [Documentos](./documentos/docs.md)
+
