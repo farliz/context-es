@@ -1,2 +1,2 @@
 ## Lista de Talleres
-- [Taller 01](01.pdf)
+- [Comandos básicos](01.pdf)
