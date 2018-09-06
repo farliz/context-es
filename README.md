@@ -18,9 +18,10 @@ Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertid
 ## [Lista de correo](./documentos/lista.md)
 
 ### Contacto
+```
 Grupo de usuarios de ConteXt de Ecuador
 Lizardo M. Reyna Bowen
 Universidad Técnica de Manabí
 contextec@disroot.org | lreyna@utm.edu.ec
 Portoviejo, Manabí, Ecuador
-
+```
