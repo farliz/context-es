@@ -29,7 +29,7 @@ Adelante!
 ### Contacto
 contextec@disroot.org
 
-## [Instalación](.documentos/install-win.pdf)
+## [Instalación](./documentos/install-win.pdf)
 
 ## [Talleres](./talleres/talleres.md)
 
