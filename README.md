@@ -7,6 +7,16 @@ ConTeXt es un sistema de composición de textos diferente a los procesadores de 
 Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertido!
 
 
+## [Instalación](./documentos/install-win.pdf)
+
+## [Talleres](./talleres/talleres.md)
+
+## [Documentos](./documentos/docs.md)
+
+## [Blog](./posts/blog.md)
+
+
+
 ## Únete a nuestra lista de correos
 
 [https://lists.riseup.net/www/info/context-ec](https://lists.riseup.net/www/info/context-ec)
@@ -28,12 +38,4 @@ Adelante!
 
 ### Contacto
 contextec@disroot.org
-
-## [Instalación](./documentos/install-win.pdf)
-
-## [Talleres](./talleres/talleres.md)
-
-## [Documentos](./documentos/docs.md)
-
-## [Blog](./posts/blog.md)
 
