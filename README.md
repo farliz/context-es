@@ -29,5 +29,5 @@ Adelante!
 ### Contacto
 contextec@disroot.org
 
-## Talleres
-[Talleres](./talleres/talleres.md)
+## [Talleres](./talleres/talleres.md)
+
