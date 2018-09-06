@@ -1,0 +1,51 @@
+\setuppapersize[A6, landscape]
+
+\setuplayout[backspace=10mm, leftmargin=10mm, leftedgedistance=0pt, width=125mm, leftmargindistance=0pt,
+  rightmargindistance=0pt]
+
+\setupbodyfont[pagella, 11pt]
+\setuppagenumbering[state=stop]
+\mainlanguage[es]
+\definecolor[mgreen][x=083f5c]
+\setupheader[style=\sc, color=white]
+\setupfooter[style=\sc, color=white]
+\setupheadertexts[Instituto de Investigación][]
+\setupfootertexts[][Universidad Técnica de Manabí]
+
+
+\setupbackgrounds[page][background=color, backgroundcolor=mgreen]
+\setupbackgrounds[text][state=repeat,background={beforetext}]
+\startcolor[white]
+
+\definelayer[beforetext]
+
+  
+\starttext
+
+\middlealigned{\tfd\bf Invitación}
+\blank[big]
+Te invitamos a ser parte de la {\it primera comunidad de usuarios} de \CONTEXT ~de Ecuador.\blank
+
+\CONTEXT ~es un sistema de composición de textos diferente a los procesadores de texto más
+conocidos como LibreOffice Writer y Word. Nuestro objetivo es difundir el uso de software
+libre y compartir nuestros conocimientos en el uso de \CONTEXT ~para la preparación de
+documentos de texto.\blank[big]
+
+
+\startalignment[middle]
+
+  {\tfb\bf \CONTEXT -ec}
+  
+  {\bf Lugar:} Instituto de Investigación
+  
+    {\bf Fecha:} Miércoles 5 de septiembre del 2018
+    
+{\bf Hora:} 15:00 h\\
+{\bf Facilitador:} Lizardo Mauricio Reyna Bowen
+
+\stopalignment
+
+\setlayer[beforetext][x=70mm,y=82mm]{\sc Facultad de Ingeniería Agrícola}
+\setlayer[beforetext][x=-2mm,y=55mm]{\externalfigure[figures/utm_logo][width=2.5cm]}
+
+\stoptext
