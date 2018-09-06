@@ -15,6 +15,8 @@ Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertid
 
 ## [Blog](./posts/blog.md)
 
+## [Lista de correo](./documentos/lista.md)
+
 ### Contacto
 Grupo de usuarios de ConteXt de Ecuador
 Lizardo M. Reyna Bowen
