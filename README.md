@@ -15,27 +15,10 @@ Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertid
 
 ## [Blog](./posts/blog.md)
 
-
-
-## Únete a nuestra lista de correos
-
-[https://lists.riseup.net/www/info/context-ec](https://lists.riseup.net/www/info/context-ec)
-
-Para realizar una pregunta a esta lista, envía un correo a:
-
-context-ec@lists.riseup.net
-
-Para suscribirte a esta lista de correos, envía un correo a:
-
-context-ec-subscribe@lists.riseup.net
-
-Para darte de baja de esta lista, envía un correo a:
-
-context-ec-unsubscribe@lists.riseup.net
-
-Adelante!
-
-
 ### Contacto
-contextec@disroot.org
+Grupo de usuarios de ConteXt de Ecuador
+Lizardo M. Reyna Bowen
+Universidad Técnica de Manabí
+contextec@disroot.org | lreyna@utm.edu.ec
+Portoviejo, Manabí, Ecuador
 
