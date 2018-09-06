@@ -35,3 +35,5 @@ contextec@disroot.org
 
 ## [Documentos](./documentos/docs.md)
 
+## [Blog](./posts/blog.md)
+
