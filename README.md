@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Bienvenidos a ConTeXt-ec
 
-You can use the [editor on GitHub](https://github.com/farliz/context-ec.github.io/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+Bienvenido a ConTeXt-ec; la comunidad de usuarios del programa ConTeXt de Ecuador.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+ConTeXt es un sistema de composición de textos diferente a los procesadores de texto más conocidos como LibreOffice Writer y Word. Nuestro objetivo es difundir el uso de software libre y compartir nuestros conocimientos en el uso de ConTeXt para la preparación de documentos de texto. Estamos enfocados principalmente en la comunidad universitaria quienes deben lidiar con la redacción de textos casi a diario. En ConTeXt tendrás un ambiente cómodo y profesional para crear tus documentos de texto que quedarán correctamente estructurados y con un aspecto elegante. 
 
-### Markdown
+Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertido!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Únete a nuestra lista de correos
 
-# Header 1
-## Header 2
-### Header 3
+[https://lists.riseup.net/www/info/context-ec](https://lists.riseup.net/www/info/context-ec)
 
-- Bulleted
-- List
+Para realizar una pregunta a esta lista, envía un correo a:
 
-1. Numbered
-2. List
+context-ec@lists.riseup.net
 
-**Bold** and _Italic_ and `Code` text
+Para suscribirte a esta lista de correos, envía un correo a:
 
-[Link](url) and ![Image](src)
-```
+context-ec-subscribe@lists.riseup.net
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Para darte de baja de esta lista, envía un correo a:
 
-### Jekyll Themes
+context-ec-unsubscribe@lists.riseup.net
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/farliz/context-ec.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Adelante!
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Contacto
+contextec@disroot.org
+
