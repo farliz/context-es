@@ -1,0 +1,136 @@
+\setuppapersize[A4, landscape]
+\mainlanguage[es]
+\setuplayout[
+		header=1.5cm,
+		footer=1.5cm,
+		height=fit,
+		topspace=0.5cm,
+		width=fit,
+		backspace=1.5cm,
+		rightmargin=0.5cm,
+		leftmargin=0.5cm,
+		leftmargindistance=0pt,
+		rightmargindistance=0pt,
+		grid=yes, columndistance=12pt,
+		columns=3
+		]
+
+\setupheader[
+		state=on,
+		strut=yes,
+		style=\tfx\bf\ss,
+		]
+\setupheadertexts[Universidad Técnica de Manabí][]
+
+\setupfooter[
+		state=on,
+		strut=yes,
+		style=\tfx\bf\ss,
+		]
+\setupfootertexts[Made with \CONTEXT][http://wiki.contextgarden.net]
+
+\setuphead[title][
+		style=\tfc\bf\ss,
+		align=middle,
+		]
+\setuphead[subject][
+		style=\tfa\bf\ss,
+		after=\blank,
+		]
+\setupbodyfont[lbr, 18pt]
+\definefont[ctex][name:LinLibertine_RB_G*default at 30pt]
+\definefont[firait][name:FiraSans-Italic*default at 18pt]
+\definefont[fira][name:FiraSans-Regular*default at 18pt]
+%\setupindenting[yes, big]
+\definehighlight[men][color=blue]
+\setuppagenumber[state=stop]
+
+\setupalign[right]
+\setupcolors[state=start]
+\setupinteraction[state=start, color=blue]
+
+%\definelayer[logo][width=.98\paperwidth,height=.97\paperheight,state=repeat]
+%
+%\setupbackgrounds[page][background={foreground,logo}]
+%
+%\setlayer
+        %[logo]
+        %[preset=righttop,
+         %hoffset=1cm]
+        %{\externalfigure[figures/utm_logo][height=4cm,3.5cm]}
+
+
+
+\starttext
+\startalignment [center]
+\title{Guía de instalación de \CONTEXT ~\&~TeXworks para Windows (cualquier versión)}
+\stopalignment
+\blank
+
+% INSTALAR CONTEXT
+
+\subject{Primer paso:  instalar \CONTEXT}\\
+
+\startalignment
+\startitemize[n, packed]
+
+\item Descargar el archivo ZIP del siguiente enlace \goto{http://minimals.contextgarden.net/setup/context-setup-mswin.zip}[url(http://minimals.contextgarden.net/setup/context-setup-mswin.zip)].
+
+\item Guardar este archivo en el Disco local C: y extraer en este directorio. Aparecerá una carpeta de nombre {\ss{context}}, en la cual se hallará un archivo de nombre {\ss{first-setup.bat}}.
+\item Ejecutar como administrador el archivo {\ss{first-setup.bat}}. Se abrirá una
+  terminal de Windows que mostrará el proceso de descarga de los  archivos. 
+
+\item Esperar a que la ventana se cierre automáticamente. Este proceso puede tardar según la velocidad de conexión a internet.
+
+\stopitemize
+\stopalignment
+
+%INSTALAR TEXWORKS
+
+\subject{Segundo paso: instalar TeXworks}\\
+
+\startalignment
+\startitemize[n, packed]
+\item Descargar el archivo ejecutable desde la web oficial: \goto{http://www.tug.org/texworks/}[url(http://www.tug.org/texworks/)]
+
+\item Ejecutar el archivo e instalar con los valores por defecto.
+
+\item Ya instalado, ejecutar el programa {\ss{TeXworks}}, dirigirse al menú  {\ss{Editar}} y a la opción {\ss{Preferencias}}.
+
+\item Una vez abierta la ventana de {\ss{Preferencias}}, dirigirse a la pestaña {\ss{Compilación}} y en esta a la sección {\ss{Ubicación de TeX y programas relativos}}, en la que se encuentra un botón con el signo {\ss\bf{+}}, sobre el cual hay que hacer click.
+
+\item Se abrirá una nueva ventana, en esta se realizará la ruta a continuación:\\ {\ss{Disco local C: ---> context ---> tex ---> texmf-mswin ---> bin}}.\\ Luego, dar click en el botón {\ss{seleccionar carpeta}}.
+
+\item Una vez que aparezca el directorio {\ss{C:/context/tex/texmf-mswin/bin}} en la lista, llevarlo hasta la {\bf{primera}} posición utilizando el botón con la flecha verde hacia arriba.
+
+\item En la misma ventana de {\ss{Preferencias}}, en la sección {\ss{Herramientas para procesamiento}} seleccionar como predeterminada la opción {\ss{ConTeXt (LuaTeX)}}. El resultado hasta este punto debe coincidir con lo mostrado en la Figura 1 (\in{Fig.}[fig:f1]). Dar click en el botón {\ss{OK}}
+
+\stopitemize
+\stopalignment 
+
+\placefigure
+[]
+[fig:f1]
+{Correcta configuración de las preferencias de TeXworks}
+{\externalfigure[../talleres/figuras/setup][width=.67\textwidth]}
+
+%ATAJOS DEL TECLADO
+
+\subject{Tercer paso: atajos del teclado}
+
+\startalignment
+\startitemize[n,packed]
+
+\item Entrar a la siguiente dirección web: \goto{https://github.com/farliz/texworks-context/blob/master/tw-context.txt}[url(https://github.com/farliz/texworks-context/blob/master/tw-context.txt)]. 
+
+\item Crear un archivo de texto en el escritorio con el nombre de {\ss{tw-context}} y pegar el código expuesto en la página web en este archivo.
+
+\item Dirigirse al menú {\ss{Scripts}} de TeXworks, luego a la opción {\ss{Scripts de TeXworks}} y luego a la opción {\ss{Carpeta de Scripts}}. Se abrirá una ventana, dentro de la cual hay que regresar un directorio, el cual contendrá la carpeta {\ss{completions}} donde yace un archivo de texto de nombre {\ss{tw-context}}.
+
+\item Borrar este archivo de la carpeta y en su lugar pegar el archivo que creamos en el escritorio.
+
+\stopitemize
+\stopalignment
+
+ 
+\stoptext

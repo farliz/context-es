@@ -1,0 +1,48 @@
+%%!TEX encoding = UTF-8 Unicode
+%%%%%% init
+
+text:=\starttext#RET##INS##RET#\stoptext
+
+
+
+%%%% sectioning %%%%%%
+cc:=\chapter{#INS#}#RET#
+s:=\section{#INS#}#RET#
+ss:=\subsection{#INS#}#RET#
+sss:=\subsubsection{#INS#}#RET#
+su:=\subject{#INS#}#RET#
+suu:=\subsubject{#INS#}#RET#
+suuu:=\subject{#INS#}#RET#
+
+%%%%% text style and size %%%%%%
+
+it:={\it #INS#}
+tt:={\tt #INS#}
+bf:={\bf #INS#}
+em:={\em #INS#}
+sc:={\sc #INS#}
+ss:={\ss #INS#}
+rm:={\rm #INS#}
+sl:={\sl #INS#}
+ub:=\underbar{#INS#}
+ubs:=\underbars{#INS#}
+ob:=\overbar{#INS#}
+obs:=\overbars{#INS#}
+os:=\overstrike{#INS#}
+oss:=\overstrikes{#INS#}
+q:=\quote{#INS#}
+qq:=\quotation{#INS#}
+ty:=\type{#INS#}
+ff:=\footnote{#INS#}
+
+%%%% environments %%%%%%%%%
+itemize:=\startitemize#RET##INS##RET#\stopitemize
+ii:=\item #INS#
+makeup:=\startstandardmakeup#RET##INS##RET#\stopstandardmakeup
+alignment:=\startalignment#RET##INS##RET#\stopsalignment
+packed:=\startpacked#RET##INS##RET#\stoppacked
+front:=\startfrontmatter#RET##INS##RET#\stopfrontmatter
+body:=\startbodymatter#RET##INS##RET#\stopbodymatter
+back:=\startbackmatter#RET##INS##RET#\stopbackmatter
+framed:=\startframed#RET##INS##RET#\stopframed
+quotation:=\startquotation#RET##INS##RET#\stopquotation
