@@ -1,0 +1,469 @@
+\usemodule[pre-01]
+
+\mainlanguage[es]
+\usemodule[chart]
+\setupcolors[state=start]
+\definelayer[LogoUTM]
+%\setupbodyfont[cmr,12pt]
+\setuptype[color=blue]
+\setuphead[subject][
+		style=\tfa\bf
+		]
+%\setuphead[subsubject][
+	%	style=\bf
+	%	]
+\setuplayout[
+		backspace=1cm,
+		width=16cm
+		]
+		
+\starttext
+
+\StartTitlePage
+  \CONTEXT ~~\&~~TeXworks\\
+  
+{\tfxx
+\goto{http://wiki.contextgarden.net}[url(http://wiki.contextgarden.net)]}
+
+\blank
+
+Taller 01
+\blank[]
+Instalación y Comandos Básicos
+\blank[3cm]      
+
+\CONTEXT -ec\par
+      
+{\externalfigure[../figures/utm_logo][width=3cm]}
+\StopTitlePage 
+
+\Topics{Contenido}
+
+\Topic{Instalación y configuración}
+
+
+% INSTALAR CONTEXT
+
+\subject{Primer paso:  instalar \CONTEXT}\\
+
+
+\startitemize[n, packed]
+
+\item Descargar el archivo ZIP del siguiente enlace\par  \goto{http://wiki.contextgarden.net}[url(http://wiki.contextgarden.net)].
+
+\item Guardar este archivo en el Disco local C: y extraer en este directorio. Aparecerá una carpeta de nombre {\ss{context}}, en la cual se hallará un archivo de nombre {\ss{first-setup.bat}}
+\item Ejecutar como administrador el archivo {\ss{first-setup}}. Se abrirá una terminal de Windows que mostrará los archivos descargados. 
+
+\item Esperar a que la ventana se cierre automáticamente. Este proceso puede tardar según la velocidad de conexión a internet.
+
+\stopitemize
+
+
+%INSTALAR TEXWORKS
+
+\subject{Segundo paso: instalar TeXworks}\\
+
+
+\startitemize[n, packed]
+\item Descargar el archivo ejecutable del siguiente enlace:\par  \goto{http://www.tug.org/texworks/}[url(http://www.tug.org/texworks/)]
+
+\item Ejecutar el archivo e instalar con los valores por defecto.
+
+\item Ya instalado, ejecutar el programa {\ss{TeXworks}}, dirigirse al menú  {\ss{Editar}} y a la opción {\ss{Preferencias}}.
+
+\item Una vez abierta la ventana de {\ss{Preferencias}}, dirigirse a la pestaña {\ss{Compilación}} y en esta a la sección {\ss{Ubicación de TeX y programas relativos}}, en la que se encuentra un botón con el signo {\ss\bf{+}}, sobre el cual hay que hacer click.
+
+\item Se abrirá una nueva ventana, en esta se realizará la ruta a continuación:\\ {\ss{Disco local C: ---> context ---> tex ---> texmf-mswin ---> bin}}.\\ Luego, dar click en el botón {\ss{seleccionar carpeta}}.
+
+\item Una vez que aparezca el directorio {\ss{C:/context/tex/texmf-mswin/bin}} en la lista, llevarlo hasta la {\bf{primera}} posición utilizando el botón con la flecha verde hacia arriba.
+
+\item En la misma ventana de {\ss{Preferencias}}, en la sección {\ss{Herramientas para procesamiento}} seleccionar como predeterminada la opción {\ss{ConTeXt (LuaTeX)}}. El resultado hasta este punto debe coincidir con lo mostrado en la Figura 1 (\in{Fig.}[fig:f1]). Dar click en el botón {\ss{OK}}
+
+\stopitemize
+
+
+\placefigure
+[]
+[fig:f1]
+{Correcta configuración de las preferencias de TeXworks}
+{\externalfigure[../figures/setup][width=.67\textwidth]}
+
+%ATAJOS DEL TECLADO
+
+\subject{Tercer paso: atajos del teclado}
+
+\startalignment
+\startitemize[n,packed]
+
+\item Entrar a la siguiente dirección web: \goto{https://github.com/farliz/texworks-context/blob/master/tw-context.txt}[url(https://github.com/farliz/texworks-context/blob/master/tw-context.txt)]. 
+
+\item Crear un archivo de texto en el escritorio con el nombre de {\ss{tw-context}} y pegar el código expuesto en la página web en este archivo.
+
+\item Dirigirse al menú {\ss{Scripts}} de TeXworks, luego a la opción {\ss{Scripts de TeXworks}} y luego a la opción {\ss{Carpeta de Scripts}}. Se abrirá una ventana, dentro de la cual hay que regresar un directorio, el cual contendrá la carpeta {\ss{completions}} donde yace un archivo de texto de nombre {\ss{tw-context}}.
+
+\item Borrar este archivo de la carpeta y en su lugar pegar el archivo que creamos en el escritorio.
+
+\stopitemize
+\stopalignment
+
+%COMANDOS BÁSICOS
+\Topic{Comandos básicos}
+
+%SECCIÓN DE TEXTO
+\type{\starttext}\\
+Hola mundo, este es un texto de prueba\\
+\type{\stoptext}
+
+%FORMA DE UTILIZAR LOS COMANDOS
+\subject{Comandos}
+ Los comandos  empiezan con una barra inclinada hacia la izquierda\type{\}, seguido del
+   nombre del comando. Entre corchetes \type{[ ]} se colocan las opciones del comando y
+   entre llaves \type{{ }} los argumentos. El símbolo \% indica que es n comentario o
+   anotación y no lo reconoce como comando.
+\blank
+   Ejemplo:\par
+
+   \type{\chapter{Introducción}}\par
+   \type{\color[red]{texto}}\par
+   \type{{\bf texto}}\page       
+
+\subject{Comandos \quote{start-stop}}   
+
+Otra forma de ejecutar comandos en la forma \type{start-stop}.
+
+\type{\startitemize[n, packed]}\\
+\type{\item}  Uno\\
+\type{\item}  Dos\\
+\type{\item}  Tres\\
+\type{\stopitemize}
+
+%TABLA DE CONTENIDOS
+\subject{Insertar tabla de contenidos}
+\type{\placecontent}\par
+\type{\completecontent}
+\page
+
+%ESTRUCTURA DEL DOCUMENTO SIN NUMERACIÓN
+\subject{Estructura del documento sin numeración}
+\type{\title{Título}}: Título\\
+\type{\subject{Tema}}: Tema\\
+\type{\subsubject{Subtema}}: Subtema\\
+\type{\subsubsubject{Subsubtema}}: Subsubtema\\
+
+%ESTRUCTURA DEL DOCUMENTO CON NUMERACIÓN
+\subject{Estructura del documento con numeración}
+\type{\chapter{Capítulo}}: 1 Capítulo\\
+\type{\section{Sección}}: 1.1 Sección\\
+\type{\subsection{Subsección}}: 1.1.1 Subsección\\
+\type{\subsubsection{Subsubsección}}: 1.1.1.1 Subsubsección\\
+
+\subject{Comandos útiles}
+% COMANDOS UTILES
+\type{\blank } --> Espacio en blanco\\
+
+\type{\par} --> Salto de línea\\
+
+\type{\\} --> Salto de línea\\
+
+\type{\page} --> Salto de página
+
+\subject{Caracteres especiales}
+
+Algunos caracteres se deben colocar anteponiendo la barra inclinada:
+
+\type{\%} --> \%
+
+
+
+%FAMILIAS DE LETRAS
+\subject{Familias de letras}
+~~~~~~~~~~~~~~~~~~~~~~~~Texto normal\\
+\type{{\rm texto}}: {\rm{Romanas}\\
+\type{{\ss texto}}: {\ss{Sans Serif}}\\
+\type{{\sc texto}}: {\sc{Versalitas}}\\
+       
+%ESTILO DE LETRAS
+\subject{Estilo de letras}
+~~~~~~~~~~~~~~~~~~~~~~~~Texto normal\\
+\type{{\bf texto}}:   {\bf{Negritas}}\\
+\type{{\it texto}}:    {\it{Itálicas}}\\
+\type{{\it texto}}: {\em{Énfasis}}\\
+\type{{\sl texto}}:  {\sl{Inclinadas}}\\
+\type{{\overbar texto}}: {\overbar{Sobrerayado}}\\
+\type{{\underbar texto}}: {\underbar{Subrayado}}\\
+\type{{\overstrike texto}}: {\overstrike{Tachado simple}}
+\page
+
+%COMILLAS
+\subject{Comillas simples}
+\type{\quote{simple}} ---> \quote{simple}
+\subject{Comillas inglesas}
+\type{\startquotation}\\
+El diablo se esconde en los detalles}\\
+\type{\stopquotation}
+\blank 
+Da como resultado:
+\startquotation El diablo se esconde en los detalles \stopquotation
+\blank
+\subject{Comillas latinas}
+Atl + 174 ---> «\\
+Alt + 175 ---> »\\
+\blank
+\type{\setuplanguage}[es]\\
+[leftquotation=«, rightquotation=», leftquote=', rightquote=']
+\page
+
+%TAMAÑO DE LETRA
+\subject{Tamaño de letra}
+~~~~~~~~~~~~~~~~~~~~~~~~Texto por defecto\\
+\type{\tfxx{texto}}:  {\tfxx{texto}}\\
+\type{\tfx{texto}}:   {\tfx{texto}}\\
+\type{\tfa{texto}}:    {\tfa{texto}}\\
+\type{\tfb{texto}}:   {\tfb{texto}}\\
+\type{\tfc{texto}}:  {\tfc{texto}}\\
+\type{\tfd{texto}}:  {\tfd{texto}}\\
+
+%LISTAS
+\subject{Listas}
+\type{\startitemize[n, packed] %[n, R, r, a , A, 1, 2, 3]}\\
+\type{\item}  Uno\\
+\type{\item}  Dos\\
+\type{\item}  Tres\\
+\type{\stopitemize}
+
+
+\bTABLE[frame=off]
+
+\bTR
+\bTD[width=3cm] 
+\startitemize[n, packed]
+\item Uno
+\item Dos
+\item Tres
+\stopitemize
+\eTD
+\bTD[width=3cm] 
+\startitemize[R, packed]
+\item Uno
+\item Dos
+\item Tres
+\stopitemize
+\eTD
+\bTD [width=3cm]
+\startitemize[a, packed]
+\item Uno
+\item Dos
+\item Tres
+\stopitemize
+\eTD
+\bTD [width=3cm]
+\startitemize[3, packed]
+\item Uno
+\item Dos
+\item Tres
+\stopitemize
+\eTD
+
+\eTR
+\eTABLE
+
+%ELEMENTOS DEL TEXTO
+\subject{Elementos del texto}
+Superíndice ---> m\type{\high{2}} ---> m\high{2}\blank
+Subíndice ---> CO\type{\low{2}} ---> CO\low{2}\blank
+Super y subíndice combinados ---> NH\type{\lohi{4}{+}} ---> NH\lohi{4}{+}
+
+%NOTAS AL PIE
+\subject{Notas al pie}
+Texto\type{\footnote{Contenido de la nota al pie}} ---> Texto\footnote{Contenido de la nota al pie}.
+
+% ECUACIONES
+\subject{Matemáticas}
+
+Las ecuaciones se insertan  entre dos símbolos de dolar \$ \$.
+
+\starttyping
+$ c^2 = a^2 + b^2 $
+\stoptyping
+
+{\bf Resulta:}\\
+$ c^2 = a^2 + b^2 $
+
+
+%ALINEACIÓN DEL TEXTO
+\subject{Alineación del texto}
+\subsubject{Alineación de una sola linea}
+\rightaligned{\type{\rightaligned{Texto}}}\\
+\rightaligned{Texto}\\
+
+\middlealigned{\type{\middlealigned{Texto}}}\\
+\middlealigned{Texto}\\
+
+\leftaligned{\type{\leftaligned{Texto}}}\\
+\leftaligned{Texto}\\
+
+\subsubject{Alinear uno o varios párrafos}
+
+\startalignment[left]
+\type{\startalignment[left]}\\
+La sección entre estos comandos pasa a estar alineado según se indique (middle,left,right o vacío para justificar)\\
+\type{\stopalignment}\\
+\stopalignment
+
+
+%TEXTO DELINEADO O SOMBREADO
+\subject{Texto delineado o sombreado}
+\type{\framed{Texto Texto Texto}} ---> \framed{Texto Texto Texto}
+\blank
+
+\type{\startframed}\\
+La ley de la gravedad no es responsable de que la gente se enamore
+\type{\stopframed}
+\blank
+Resulta:\\
+\startframed
+La ley de la gravedad no es responsable de que la gente se enamore
+\stopframed
+\blank
+\type{\startframed[background=color, backgroundcolor=gray]}\\
+La ley de la gravedad no es responsable de que la gente se enamore
+\type{\stopframed}
+\blank
+Resulta:\\
+\startframed[background=color, backgroundcolor=gray]
+La ley de la gravedad no es responsable de que la gente se enamore
+\stopframed
+\page
+
+\type{\startframed[background=color, backgroundcolor=black, foregroundcolor=white]}\\
+La ley de la gravedad no es responsable de que la gente se enamore
+\type{\stopframed}
+\blank
+Resulta:\\
+\startframed[background=color, backgroundcolor=blue, foregroundcolor=white]
+La ley de la gravedad no es responsable de que la gente se enamore
+\stopframed
+\blank
+
+
+\type{\startframed[background=color, backgroundcolor=black, foregroundcolor=blue,
+    frame=off, corner=round]}\\
+La ley de la gravedad no es responsable de que la gente se enamore
+\type{\stopframed}
+\blank
+Resulta:\\
+\startframed[background=color, backgroundcolor=cyan, foregroundcolor=blue, frame=off, corner=round]
+La ley de la gravedad no es responsable de que la gente se enamore
+\stopframed
+\page
+
+%COLOR DE LAS LETRAS
+\subject{Color de las letras}
+\type{\color[red]{Texto en rojo}}\\ \color[red]{Texto en rojo}\blank
+\type{\color[green]{Texto en verde}}\\ \color[green]{Texto en verde}\blank
+\type{\color[darkmagenta]{Texto en magenta oscuro}}\\ \color[darkmagenta]{Texto en magenta oscuro}
+\blank[2cm]
+
+Mas colores en \goto{http://wiki.contextgarden.net/Color}[url(http://wiki.contextgarden.net/Color)]
+\page
+
+\Topic{Configuración}%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Los comandos de configuración empiezan con la palabra \type{\setup...}, y se colocan antes de \type{\starttext}.
+
+% TIPO y TAMAÑO DE LETRA
+\subject{Tipo y Tamaño de letra}
+\type{\setupbodyfont[schola, 11pt]}\\
+
+
+Otros tipos de letra:\par
+\startitemize[packed, columns, three]
+\item heros (sans serif)
+\item termes
+\item pagella
+\item iwona
+\item adventor
+\item bonum
+\item cmr (por defecto)
+\item chorus
+\item getium
+\item cambria
+\item utopia
+\item antykwa
+\item lbr
+\stopitemize
+\page
+
+%ENCABEZADO Y PIE DE PÁGINA
+\subject{Encabezado}
+\type{\setupheader[state=start,style=\bf]}\\
+\type{\setupheadertexts[Universidad X][Página \pagenumber]} 
+
+\subject{Pie de página}
+\type{\setupfooter[state=start,style=\bf]}\\
+\type{\setupfootertexts[Universidad X][Página \pagenumber]}\blank[2*line]
+
+Cualquiera de estas configuraciones resultará en un encabezado o pie de página como el siguiente:\blank[big]
+\hairline
+{\bf Universidad X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Página 2}
+\hairline
+\page
+
+%INTERLINEADO
+\subject{Interlineado}
+\type{\setupinterlinespace[small]  % medium, big}
+\blank[big]
+\setupinterlinespace[small]
+\input khatt-en\blank
+\setupinterlinespace[big]
+\input khatt-en
+\page
+
+%SANGRÍA
+\setupinterlinespace[small]
+\subject{Sangría}
+\type{\setupindenting[yes, small]   % medium, big }
+\blank[big]
+Primer párrafo\blank
+
+\setupindenting[yes,small]
+\input khatt-en\blank
+\setupindenting[yes,big]
+\input khatt-en
+\page
+
+\setupindenting[no]
+%COLUMNAS
+\subject{Columnas}
+%Comando en el preámbulo (antes de \type{\starttext}):\\
+%\type{\setupcolumns[n=2]}%, align=no, distance=0.4cm, rule=on]}
+\blank
+%Comando en la sección de texto:\\
+\type{\startcolumns}[n=2]\\
+   \type{\input} davis\\
+\type{\stopcolumns}\\
+\blank
+{\bf Resulta:}\\
+\startcolumns[n=2]
+\input davis
+\stopcolumns
+\page
+
+%HIPERVÍNCULOS
+\subject{Hipervínculos}
+\type{\setupinteraction[state=start]}\\
+\type{\goto{Texto del hipervínculo}[url(Enlace web)]}\blank[big]
+
+\subsubject{Ejemplo}
+
+...más información en:\\
+\type{\goto{ConTeXt Garden}}\\
+\type{[url(http://wiki.contextgarden.net/Main_Page)]}
+\blank
+
+Da como resultado: \blank
+...más información en:\\ 
+\goto{ConTeXt Garden}[url(http://wiki.contextgarden.net/Main_Page)]
+
+\stoptext
