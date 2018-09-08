@@ -1,0 +1,85 @@
+\usemodule[pre-01]
+\mainlanguage[es]
+\usemodule[chart]
+%\showframe
+\setupcolors[state=start]
+\definelayer[LogoUTM]
+\setupbodyfont[cmr,13pt]
+\setuptype[color=blue]
+\setuphead[subject][
+		style=\tfa\bf
+		]
+\setuplayout[
+		backspace=0.5cm,
+		width=17.5cm,
+		textwidth=16.25cm,
+		]
+\setupinteraction[
+		state=start,
+		color=middlecyan,
+		style=\bf\ss
+		]
+\starttext
+\StartTitlePage
+  \CONTEXT ~~\&~~TeXworks\\  
+{\tfxx
+\goto{http://wiki.contextgarden.net}[url(http://wiki.contextgarden.net)]}
+\blank
+Taller 02
+\blank
+Referencias cruzadas,\\ imágenes y tablas
+\blank[2cm]
+\CONTEXT -ec\par   
+{\externalfigure[figuras/utm_logo][width=2.5cm]}
+\StopTitlePage 
+
+\Topics{Contenido}
+
+\Topic[refcru]{Referencias cruzadas}
+
+Para poder utilizar referencias cruzadas a títulos, secciones, ecuaciones, figuras, tablas, entre otros, es necesario que el objeto a en cuestión tenga un nombre clave, definido de la siguiente forma:\blank
+\type{\comando}{\bf [nombre clave]}\type{{Nombre real}}\blank
+Ejemplos:\blank
+\type{\chapter}{\bf [intro]}\type{{Introducción}}\blank
+\type{\section}{\bf [refcru]}\type{{Referencias cruzadas}}\blank
+\type{\placeformula}{\bf [pitagoras]}\\
+\type{\startformula}\\
+\type{a^2+b^2=c^2}\\
+\type{\stopformula}\blank[2*big]
+Para controlar el color y otros aspectos de las referencias cruzadas, hipervínculos, entre otros, haremos uso del comando de configuración:\blank
+\type{\setupinteraction[state=start,color=name,style=name]}\page
+
+\subject{Referencia numérica}
+\type{\in{Texto previo}{Texto posterior}[Referencia]}\blank
+{\bf Referencia} hace alusión al {\bf nombre clave} del objeto en cuestión.\\
+{\bf Texto previo}~y~{\bf Texto posterior} son opcionales. Si son colocados también formarán parte del enlace.\\
+El objeto a referenciar debe tener la característica de numerado. Para esto, al incluir títulos, utilizar de preferencia los comandos\type{\chapter},~\type{\section}~y derivados.\blank[line]
+{\bf Ejemplos:}\\
+...más información en la sección~\type{\in[refcru]}.\blank
+da como resultado:\\
+...más información en la sección~\in[refcru].\blank[2*line]
+...más información en la~\type{\in{sección}{.}[refcru]}\blank
+da como resultado:\\
+...más información en la~\in{sección}{.}[refcru]\page
+
+\subject{Referencia textual}
+\type{\about[Referencia]}\blank
+{\bf Ejemplo:}\\
+...más información en la sección~\type{\about[refcru]}.\blank
+da como resultado:\\
+...más información en la sección~\about[refcru].\page
+
+\subject{Referencia a página}
+\type{\at{Texto previo}{Texto posterior}[Referencia]}\blank
+{\bf Texto previo}~y~{\bf Texto posterior} son opcionales. Si son colocados también formarán parte del enlace.\blank
+{\bf Ejemplos:}\\
+...esta figura, ubicada en la página~\type{\at[refcru]}, es prueba que...\blank
+da como resultado:\\
+...esta figura, ubicada en la página~\at[refcru], es prueba que...\blank[3*line]
+...esta figura, ubicada en la \type{\at{página~}[refcru]}, prueba que...\blank
+da como resultado:\\
+...esta figura, ubicada en la \at{página~}[refcru], prueba que...\page
+
+\Topic{Imágenes}
+\Topic{Tablas}
+\stoptext
