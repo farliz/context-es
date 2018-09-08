@@ -8,7 +8,7 @@ Te animamos a descubrir las posibilidades ConTeXt, será un tiempo bien invertid
 
 
 ## [Instalación en Windows](./documentos/install-win.pdf)
-- [Video](https://www.dropbox.com/home/Videos_context/context_ins_win.mp4)
+- [Video](https://www.dropbox.com/s/wxahdzvpojw2wzj/context_ins_win.mp4?dl=0)
 
 ## [Instalación en GNU/Linux (video)](https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13173/context_1.webm)
 
