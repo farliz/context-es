@@ -19,7 +19,7 @@
 		color=middlecyan,
 		style=\bf\ss
 		]
-
+\
 \starttext
 \StartTitlePage
   \CONTEXT ~~\&~~TeXworks\\  
@@ -48,13 +48,9 @@ Ejemplos:\blank
 \type{\startformula}\\
 \type{a^2+b^2=c^2}\\
 \type{\stopformula}\blank[2*big]
-<<<<<<< HEAD
-Para controlar el color y otros aspectos de las referencias cruzadas se emplea el siguiente comando de configuración:\blank
-\type{\setupinteraction[state=start,color=name,style=name,etc.]}\page
-=======
+
 Para controlar el color y otros aspectos de referencias cruzadas, hipervínculos y otros, haremos uso del comando de configuración:\blank
 \type{\setupinteraction[state=start,color=blue,style=\bf,etc.]}\page
->>>>>>> 3e6bef88e214f830b6b5afa1ac4d075da56750c5
 
 \subject{Referencia numérica}
 \type{\in{Texto previo}{Texto posterior}[Referencia]}\blank
@@ -80,12 +76,12 @@ da como resultado:\\
 \type{\at{Texto previo}{Texto posterior}[Referencia]}\blank
 {\bf Texto previo}~y~{\bf Texto posterior} son opcionales. Si son colocados también formarán parte del enlace.\blank
 {\bf Ejemplos:}\\
-...esta figura, ubicada en la página~\type{\at[refcru]}, es prueba que...\blank
+...esta figura, ubicada en la página~\type{\at[ping1]}, es prueba que...\blank
 da como resultado:\\
-...esta figura, ubicada en la página~\at[refcru], es prueba que...\blank[3*line]
-...esta figura, ubicada en la \type{\at{página~}[refcru]}, prueba que...\blank
+...esta figura, ubicada en la página~\at[ping1], es prueba que...\blank[3*line]
+...esta figura, ubicada en la \type{\at{página~}[ping1]}, prueba que...\blank
 da como resultado:\\
-...esta figura, ubicada en la \at{página~}[refcru], prueba que...\page
+...esta figura, ubicada en la \at{página~}[ping1], prueba que...\page
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Topic{Gráficos}
@@ -105,44 +101,44 @@ El comando más simple para insertar gráficos es:\blank
 En muchos casos será necesario ajustar las dimensiones de los gráficos, para lo cual es necesario añadir parámetros:\blank
 \type{\externalfigure[nombre][height=3cm,width=2cm]}\blank
 Se puede especificar el alto o el ancho y el programa reescalará la dimensión no definida. También es posible especificar ambas dimensiones a la vez o ninguna. En este último caso, la imagen será posicionada con su tamaño original.\page
+Los autores de este taller recomiendan crear una carpeta para guardas los gráficos dentro del directorio donde se encuentra ubicado el archivo .tex.\blank
+De esta manera, sólo bastará especificar el nombre de esa carpeta antes del nombre del archivo para insertarlo.\blank
 {\bf Ejemplo:}\\
 \type{\externalfigure[figuras/pinguinos][height=3cm,width=4cm]}\blank
 da como resultado:\\
 \externalfigure[figuras/pinguinos][height=3.5cm,width=4.5cm]\blank
-% Esta estructura de comando funciona sólo cuando el archivo se encuentra en el mismo directorio que el archivo .tex. Para insertar gráficos que no se encuentren en el mismo directorio será necesario especificar este último con el siguiente comando de configuración:\\
-% \type{\setupexternalfigures[directory={Ruta}]}\blank
-% {\bf Ruta} hace referencia a la dirección de la carpeta contenedora. Esta se debe escribir con barra inclinada hacia la derecha (/).\blank
-% {\bf Ejemplo de una ruta bien definida:}\\
-% C:/Users/duonagem/Documents/GitHub/context-ec/talleres/figuras\page
+Este comando insertó la imagen pinguinos.jpg que se encuentra dentro de la carpeta \quote{figuras}.\page
 
 \subject{Objetos flotantes}
-<<<<<<< HEAD
 En trabajos académicos es prudente insertar gráficos como objetos flotantes. Esto significa que context insertará la imagen en el mejor lugar posible, según su algoritmo. También brinda ventajas como la numeración automática y, por ende, la capacidad de hacer referencias cruzadas.\blank
 Para insertar un gráfico como objeto flotante se emplea el siguiente comando:\blank
-\type{\placefigure[Posición][Referencia]{Pie de foto}...}\\
-\type{...{\externalfigure[nombre.formato]}}\blank
-{\bf Posición} se refiere a la alineación del gráfico, ya se izquierda, centro  o derecha. Si no se especifica, se insertará según la alineación por defecto o predefinida.\\
-{\bf Referencia} es el nombre clave del gráfico para referencias cruzadas.\\
-{\bf Pie de foto} es el texto que describirá el gráfico. Este es opcional.\page
-{\bf Ejemplo:}\\
-\type{\placefigure[right][ping1]{Pingüinos en la Antártida}...}\\
-\type{...{\externalfigure[pinguinos.jpg]}}\blank
-da como resultado (Nótese cómo se numera automáticamente la imagen):\\
-\placefigure[middle][ping1]{Pingüinos en la Antártida}{\externalfigure[pinguinos.jpg]}\blank
-=======
-En trabajos académicos es prudente insertar gráficos como objetos flotantes. Esto significa que context insertará la imagen en el mejor jugar posible, según su algoritmo. También brinda ventajas como la numeración automática y, por ende, la capacidad de hacer referencias cruzadas.\\
-Para insertar un gráfico como referencia cruzada se emplea el siguiente comando:\blank
-
 
 \startlines
-
 \type{\placefigure[ubicación]}
- \type{[clave]}
-  \type{{Caption}}
+ \type{[nombre clave]}
+  \type{{Pie de foto}}
   \type{{\externalfigure[nombre]}}
 \stoplines
 
->>>>>>> 3e6bef88e214f830b6b5afa1ac4d075da56750c5
+{\bf ubicación} se refiere a la alineación del gráfico, ya se izquierda, centro  o derecha. Si no se especifica, se insertará según la alineación por defecto o predefinida.\\
+{\bf nombre clave} es el nombre asignado para referencias cruzadas.\\
+{\bf Pie de foto} es el texto que describirá el gráfico. Este es opcional.
+En el último juego de llaves se inserta el comando \type{\externalfigure[nombre]}, explicado previamente.\page
+{\bf Ejemplo:}\\
+
+\startlines
+\type{\placefigure[middle]}
+ \type{[ping1]}
+  \type{{Cuatro ejemplares de Pingüino Emperador}}
+  \type{{\externalfigure[figuras/pinguinos]}}
+\stoplines
+
+da como resultado:\\
+(Nótese cómo se numera automáticamente la imagen)\blank
+\placefigure[middle]
+		[ping1]
+		{Cuatro ejemplares de Pingüino Emperador}
+		{\externalfigure[figuras/pinguinos]}\blank
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Topic{Tablas}
