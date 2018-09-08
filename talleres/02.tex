@@ -19,6 +19,7 @@
 		color=middlecyan,
 		style=\bf\ss
 		]
+\setupexternalfigures[directory={C:/Users/duonagem/Documents/GitHub/context-ec/talleres/figuras}]
 \starttext
 \StartTitlePage
   \CONTEXT ~~\&~~TeXworks\\  
@@ -46,8 +47,8 @@ Ejemplos:\blank
 \type{\startformula}\\
 \type{a^2+b^2=c^2}\\
 \type{\stopformula}\blank[2*big]
-Para controlar el color y otros aspectos de las referencias cruzadas, hipervínculos, entre otros, haremos uso del comando de configuración:\blank
-\type{\setupinteraction[state=start,color=name,style=name]}\page
+Para controlar el color y otros aspectos de referencias cruzadas, hipervínculos y otros, haremos uso del comando de configuración:\blank
+\type{\setupinteraction[state=start,color=name,style=name,etc.]}\page
 
 \subject{Referencia numérica}
 \type{\in{Texto previo}{Texto posterior}[Referencia]}\blank
@@ -80,6 +81,39 @@ da como resultado:\\
 da como resultado:\\
 ...esta figura, ubicada en la \at{página~}[refcru], prueba que...\page
 
-\Topic{Imágenes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Topic{Gráficos}
+
+El comando más simple para insertar gráficos es:\blank
+\type{\externalfigure[nombre.formato]}\blank
+\CONTEXT~acepta los siguientes formatos de imagen:\blank
+\startitemize[a, packed]
+\item {\bf PDF}: .pdf
+\item {\bf MPS}: .mps o .<digits> 
+\item {\bf JPEG}: .jpg o .jpeg
+\item {\bf PNG}: .png
+\item {\bf JPEG2000}: .jp2
+\item {\bf JBIG/JBIG2}: .jbig, .jbig2 o .jb2
+\stopitemize
+
+En muchos casos será necesario ajustar las dimensiones de los gráficos, para lo cual es necesario añadir parámetros:\blank
+\type{\externalfigure[nombre.formato][height=dimensión,width=dimensión]}\blank
+Se puede especificar el alto o el ancho y el programa reescalará la dimensión no definida. También es posible especificar ambas dimensiones a la vez o ninguna. En este último caso, la imagen será posicionada con su tamaño original.\page
+{\bf Ejemplo:}\\
+\type{\externalfigure[pinguinos.jpg][height=3cm,width=4cm]}\blank
+da como resultado:\\
+\externalfigure[pinguinos.jpg][height=3.5cm,width=4.5cm]\blank
+Esta estructura de comando funciona sólo cuando el archivo se encuentra en el mismo directorio que el archivo .tex. Para insertar gráficos que no se encuentren en el mismo directorio será necesario especificar este último con el siguiente comando de configuración:\\
+\type{\setupexternalfigures[directory={Ruta}]}\blank
+{\bf Ruta} hace referencia a la dirección de la carpeta contenedora. Esta se debe escribir con barra inclinada hacia la derecha (/).\blank
+{\bf Ejemplo de una ruta bien definida:}\\
+C:/Users/duonagem/Documents/GitHub/context-ec/talleres/figuras\page
+
+\subject{Objetos flotantes}
+En trabajos académicos es prudente insertar gráficos como objetos flotantes. Esto significa que context insertará la imagen en el mejor jugar posible, según su algoritmo. También brinda ventajas como la numeración automática y, por ende, la capacidad de hacer referencias cruzadas.\\
+Para insertar un gráfico como referencia cruzada se emplea el siguiente comando:\blank
+\type{\placefigure[Lugar][Referencia]{}{\externalfigure[nombre.formato]}}
+
 \Topic{Tablas}
+
 \stoptext
