@@ -36,6 +36,7 @@ Referencias cruzadas,\\ imágenes y tablas
 
 \Topics{Contenido}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Topic[refcru]{Referencias cruzadas}
 
 Para poder utilizar referencias cruzadas a títulos, secciones, ecuaciones, figuras, tablas, entre otros, es necesario que el objeto a en cuestión tenga un nombre clave, definido de la siguiente forma:\blank
@@ -47,7 +48,7 @@ Ejemplos:\blank
 \type{\startformula}\\
 \type{a^2+b^2=c^2}\\
 \type{\stopformula}\blank[2*big]
-Para controlar el color y otros aspectos de referencias cruzadas, hipervínculos y otros, haremos uso del comando de configuración:\blank
+Para controlar el color y otros aspectos de las referencias cruzadas se emplea el siguiente comando de configuración:\blank
 \type{\setupinteraction[state=start,color=name,style=name,etc.]}\page
 
 \subject{Referencia numérica}
@@ -110,10 +111,20 @@ Esta estructura de comando funciona sólo cuando el archivo se encuentra en el m
 C:/Users/duonagem/Documents/GitHub/context-ec/talleres/figuras\page
 
 \subject{Objetos flotantes}
-En trabajos académicos es prudente insertar gráficos como objetos flotantes. Esto significa que context insertará la imagen en el mejor jugar posible, según su algoritmo. También brinda ventajas como la numeración automática y, por ende, la capacidad de hacer referencias cruzadas.\\
-Para insertar un gráfico como referencia cruzada se emplea el siguiente comando:\blank
-\type{\placefigure[Lugar][Referencia]{}{\externalfigure[nombre.formato]}}
+En trabajos académicos es prudente insertar gráficos como objetos flotantes. Esto significa que context insertará la imagen en el mejor lugar posible, según su algoritmo. También brinda ventajas como la numeración automática y, por ende, la capacidad de hacer referencias cruzadas.\blank
+Para insertar un gráfico como objeto flotante se emplea el siguiente comando:\blank
+\type{\placefigure[Posición][Referencia]{Pie de foto}...}\\
+\type{...{\externalfigure[nombre.formato]}}\blank
+{\bf Posición} se refiere a la alineación del gráfico, ya se izquierda, centro  o derecha. Si no se especifica, se insertará según la alineación por defecto o predefinida.\\
+{\bf Referencia} es el nombre clave del gráfico para referencias cruzadas.\\
+{\bf Pie de foto} es el texto que describirá el gráfico. Este es opcional.\page
+{\bf Ejemplo:}\\
+\type{\placefigure[right][ping1]{Pingüinos en la Antártida}...}\\
+\type{...{\externalfigure[pinguinos.jpg]}}\blank
+da como resultado (Nótese cómo se numera automáticamente la imagen):\\
+\placefigure[middle][ping1]{Pingüinos en la Antártida}{\externalfigure[pinguinos.jpg]}\blank
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Topic{Tablas}
 
 \stoptext
