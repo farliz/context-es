@@ -10,32 +10,30 @@
 \definefont[Cec][name:LinLibertine_R_G*default at 9pt]
 
 \setupbackgrounds[page][background=color, backgroundcolor=mgreen]
-
 \definecolor[mgreen][x=083f5c]
 
 \usecolors[xwi]
+
 \setupalign[middle]
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% STICKERS CONTEXT-EC %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \starttext
 
 
 \startcolor[white]
-
-  \Sticker
-  
-  \dorecurse{45}{\TEX \mirror{m}an \page}
-  
+    \Sticker
+        \dorecurse{45}{\TEX \mirror{m}an \page}
 \stopcolor
 
 \page
 
 \setupbackgrounds[page][background=color, backgroundcolor=mediumorchid]
+
 \startcolor[white]
-
-\Sticker
-\dorecurse{45}{\TEX \mirror{g}irl\page}
+    \Sticker
+        \dorecurse{45}{\TEX \mirror{g}irl\page}
 \stopcolor
-
 
 \stoptext
