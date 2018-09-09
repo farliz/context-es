@@ -1,19 +1,19 @@
 \definepapersize[sticker]
-                [width=70mm, height=20mm]
+                [width=42mm, height=17mm]
 
 \setuppapersize[sticker][A4]
-\setuppaper[nx=3, ny=15] % must come before \setuparranging!
+\setuppaper[nx=5, ny=16] % must come before \setuparranging!
 \setuparranging [XY]
 
 \setuppagenumbering[state=stop]
-\definefont[Sticker][name:LinLibertine_R_G*default at 48pt]
-\definefont[Cec][name:LinLibertine_R_G*default at 9pt]
+\definefont[Sticker][name:LinLibertine_Rah*default at 28pt]
+\definefont[Cec][name:LinLibertine_Rah*default at 9pt]
 
 \setupbackgrounds[page][background=color, backgroundcolor=mgreen]
 \definecolor[mgreen][x=083f5c]
 
 \usecolors[xwi]
-
+\showframe[cut]
 \setupalign[middle]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,7 +24,7 @@
 
 \startcolor[white]
     \Sticker
-        \dorecurse{45}{\TEX \mirror{m}an \page}
+        \dorecurse{80}{\TEX \mirror{m}an\\{\Cec \CONTEXT -ec} \page }
 \stopcolor
 
 \page
@@ -33,7 +33,7 @@
 
 \startcolor[white]
     \Sticker
-        \dorecurse{45}{\TEX \mirror{g}irl\page}
+        \dorecurse{80}{\TEX \mirror{g}irl\\{\Cec \CONTEXT -ec}\page}
 \stopcolor
 
 \stoptext
