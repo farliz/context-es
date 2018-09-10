@@ -1,8 +1,10 @@
 \definepapersize[sticker]
                 [width=42mm, height=17mm]
 
-\setuppapersize[sticker][A4]
-\setuppaper[nx=5, ny=16] % must come before \setuparranging!
+\definepapersize[main][width=50cm, height=100cm]
+
+\setuppapersize[sticker][main]
+\setuppaper[nx=12, ny=48] % must come before \setuparranging!
 \setuparranging [XY]
 
 \setuppagenumbering[state=stop]
@@ -24,16 +26,14 @@
 
 \startcolor[white]
     \Sticker
-        \dorecurse{80}{\TEX \mirror{m}an\\{\Cec \CONTEXT -ec} \page }
+        \dorecurse{288}{\TEX \mirror{m}an\\{\Cec \CONTEXT -ec} \page }
 \stopcolor
-
-\page
 
 \setupbackgrounds[page][background=color, backgroundcolor=mediumorchid]
 
 \startcolor[white]
     \Sticker
-        \dorecurse{80}{\TEX \mirror{g}irl\\{\Cec \CONTEXT -ec}\page}
+        \dorecurse{288}{\TEX \mirror{g}irl\\{\Cec \CONTEXT -ec}\page}
 \stopcolor
 
 \stoptext
