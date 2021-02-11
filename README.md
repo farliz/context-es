@@ -1,6 +1,6 @@
 ## Bienvenidos a ConTeXt-es
 
-Bienvenido a ConTeXt-es; la comunidad de usuarios del programa ConTeXt de Ecuador.
+Bienvenido a ConTeXt-es; la comunidad de usuarios del programa ConTeXt en Español.
 
 ConTeXt es un sistema de composición de textos diferente a los procesadores de texto más conocidos como LibreOffice Writer y Word. Nuestro objetivo es difundir el uso de software libre y compartir nuestros conocimientos en el uso de ConTeXt para la preparación de documentos de texto. Estamos enfocados principalmente en la comunidad universitaria quienes deben lidiar con la redacción de textos casi a diario. En ConTeXt tendrás un ambiente cómodo y profesional para crear tus documentos de texto que quedarán correctamente estructurados y con un aspecto elegante. 
 
