@@ -1,6 +1,6 @@
 ## Únete a nuestra lista de correos
 
-[https://lists.riseup.net/www/info/context-ec](https://lists.riseup.net/www/info/context-es)
+[https://lists.riseup.net/www/info/context-es](https://lists.riseup.net/www/info/context-es)
 
 Para realizar una pregunta a esta lista, envía un correo a:
 
