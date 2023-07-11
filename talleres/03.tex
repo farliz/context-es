@@ -1,0 +1,289 @@
+\usemodule[pre-01]
+\mainlanguage[es]
+\usemodule[chart]
+%\showframe
+\setupcolors[state=start]
+\definelayer[LogoUTM]
+\setupbodyfont[cmr,13pt]
+\setuptype[color=blue]
+\setuphead[subject][
+		style=\tfa\bf
+		]
+\setuplayout[
+		backspace=0.5cm,
+		width=17.5cm,
+		textwidth=16.25cm,
+		]
+\setupinteraction[
+		state=start,
+		color=middlecyan,
+		style=\bf\ss
+		]
+
+\starttext
+\StartTitlePage
+  \CONTEXT ~~\&~~TeXworks\\  
+{\tfxx
+\goto{http://wiki.contextgarden.net}[url(http://wiki.contextgarden.net)]}
+\blank
+Taller 03
+\blank
+Tabulación
+\blank[2cm]
+\CONTEXT -ec\par   
+{\externalfigure[figures/utm_logo][width=2.5cm]}
+\StopTitlePage 
+
+\Topics{Contenido}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Topic[tab]{Tabulación}
+
+{
+\color[blue]
+
+{\tt \{}\\
+\type{\bTABLE}\\
+{\tt Contenido de la tabla}\\
+\type{\eTABLE}\\
+{\tt \}}
+}
+
+\blank
+
+Comandos del contenido de la tabla:
+
+\startitemize[packed]
+	\item {\bf \type{\bTR}}: inicio de fila.
+	\item {\bf \type{\eTR}}: fin de fila.
+	\item {\bf \type{\bTD}}: inicio de celda.
+	\item {\bf \type{\eTD}}: fin de celda.
+\stopitemize
+
+\page
+
+Ejemplo:
+
+\blank
+
+{\tt \color[blue]{\{}}\\
+\type{\bTABLE}\\
+\type{\bTR \bTD Uno  \eTD \bTD Dos    \eTD \eTR}\\
+\type{\bTR \bTD Tres \eTD \bTD Cuatro \eTD \eTR}\\
+\type{\eTABLE}\\
+{\tt \color[blue]{\}}}\\
+
+\blank
+
+Da como resultado:
+
+\blank
+
+{\bTABLE
+\bTR \bTD Uno \eTD \bTD Dos  \eTD \eTR
+\bTR \bTD Tres \eTD \bTD Cuatro \eTD \eTR
+\eTABLE}
+
+\blank
+
+\startitemize
+\item Las dimensiones de las celdas se ajustan automáticamente al contenido.
+
+\page
+
+\item Para definir dimensiones específicas se aplica la siguiente configuración:
+\stopitemize
+
+\blank
+
+{\tt \color[blue]{\{}}\\
+\type{\bTABLE}\\
+\type{\bTR \bTD[width=2cm,height=2cm] Uno \eTD \bTD[width=4cm] Dos \eTD \eTR}\\
+\type{\bTR \bTD[height=1cm] Tres \eTD \bTD Cuatro \eTD \eTR}\\
+\type{\eTABLE}\\
+{\tt \color[blue]{\}}}\\
+
+\blank
+
+Da como resultado:
+
+\blank
+
+{\bTABLE
+\bTR\bTD[width=2cm,height=2cm] Uno \eTD\bTD[width=4cm] Dos \eTD\eTR
+\bTR\bTD[height=1cm] Tres \eTD\bTD Cuatro \eTD\eTR
+\eTABLE}
+
+\page
+
+En otros casos, es necesario modificar las características de toda una fila o columna. En ese caso se debe anteponer a la tabla el siguiente comando:
+
+\blank
+
+\type{\setupTABLE[id1][id2][ajuste=valor,ajuste=valor]}
+
+\blank
+
+Donde:
+\startitemize
+\item {\bf id1} representa la identificación de fila (row) o columna (column) en cuestión, 
+\item {\bf id2} representa la identificación de la fila o columna en específico, ya sea por número (1,2,3...) o por paridad (odd o even).
+\item {\bf Ajustes}: width, align, style, background, backgroundcolor, foregroundcolor, frame, topframe, bottomframe, entre otros.
+\stopitemize
+
+
+\page
+
+Ejemplo:
+
+\blank
+
+{\tt \color[blue]{\{}}\\
+\type{\setupTABLE[row][1][style=\bf,align=left]}\\
+\type{\setupTABLE[column][2][background=color,backgroundcolor=yellow]}\\
+\type{\setupTABLE[row][2][style=\ss,bottomframe=off]}\\
+\type{\bTABLE}\\
+\type{\bTR \bTD Uno  \eTD \bTD Dos    \eTD \eTR}\\
+\type{\bTR \bTD Tres \eTD \bTD Cuatro \eTD \eTR}\\
+\type{\eTABLE}\\
+{\tt \color[blue]{\}}}\\
+
+\blank
+
+Da como resultado:
+
+\blank
+{
+\setupTABLE[row][1][style=\bf,align=left]
+\setupTABLE[row][2][style=\ss,bottomframe=off]
+\setupTABLE[column][2][background=color,backgroundcolor=yellow]
+{\bTABLE
+\bTR \bTD Uno \eTD \bTD Dos  \eTD \eTR
+\bTR \bTD Tres \eTD \bTD Cuatro \eTD \eTR
+\eTABLE}
+}
+
+\Topic[eg]{Ejemplos de aplicación}
+
+\type{\bTABLE}\\
+\type{\bTR \bTD[nr=3] 1 \eTD \bTD[nc=2] 2/3 \eTD \bTD[nr=3] 4 \eTD \eTR}\\
+\type{\bTR \bTD 2 \eTD \bTD 3 \eTD \eTR}\\
+\type{\bTR \bTD 2 \eTD \bTD 3 \eTD \eTR}\\
+\type{\bTR \bTD[nc=3] 1/2/3 \eTD \bTD 4 \eTD \eTR}\\
+\type{\bTR \bTD 1 \eTD \bTD 2 \eTD \bTD 3 \eTD \bTD 4 \eTD \eTR}\\
+\type{\eTABLE}\\
+
+\blank
+
+{\bTABLE
+\bTR \bTD[nr=3] 1 \eTD \bTD 3 \eTD \eTR
+\bTR \bTD 2 \eTD \bTD 3 \eTD \eTR
+\bTR \bTD 2 \eTD \bTD 3 \eTD \eTR
+\bTR \bTD[nc=3] 1 2 3 \eTD \bTD 4 \eTD \eTR
+\bTR \bTD 1 \eTD \bTD 2 \eTD \bTD 3 \eTD \bTD 4 \eTD \eTR
+\eTABLE}
+
+\page
+
+\type{\setupTABLE[row][odd] [background=color,backgroundcolor=red,}\\
+\type{frame=off]}\\
+\type{\setupTABLE[row][even][background=color,backgroundcolor=gray,}\\
+\type{frame=off]}\\
+\type{\bTABLE}\\
+\type{\bTR \bTD first \eTD \bTD alpha \eTD \bTD one \eTD \eTR}\\
+\type{\bTR \bTD second \eTD \bTD beta \eTD \bTD two \eTD \eTR}\\
+\type{\bTR \bTD third \eTD \bTD gamma \eTD \bTD three \eTD \eTR}\\
+\type{\eTABLE}\\
+
+\blank
+
+{
+\setupTABLE[row][odd][
+		background=color,
+		backgroundcolor=red,
+		frame=off
+		]
+\setupTABLE[row][even][
+		background=color,
+		backgroundcolor=gray,
+		frame=off
+		]
+\bTABLE
+\bTR \bTD first \eTD \bTD alpha \eTD \bTD one \eTD \eTR
+\bTR \bTD second \eTD \bTD beta \eTD \bTD two \eTD \eTR
+\bTR \bTD third \eTD \bTD gamma \eTD \bTD three \eTD \eTR
+\eTABLE
+}
+
+\page
+
+\type{\setupTABLE[frame=off]}\\
+\type{\setupTABLE[column][first][leftframe=on]}\\
+\type{\setupTABLE[column][last][rightframe=on]}\\
+\type{\setupTABLE[row][first][topframe=on]}\\
+\type{\setupTABLE[row][first,last][bottomframe=on]}\\
+\type{\setupTABLE[column][1][alignmentcharacter={.},}\\
+\type{aligncharacter=yes,align=middle]}\\
+\type{\setupTABLE[column][2][alignmentcharacter={,},}\\
+\type{aligncharacter=yes,align=middle]}\\
+\type{\bTABLE}\\
+\type{\bTR \bTH first \eTH \bTH second \eTH \bTH third \eTH \bTH fourth\eTH \eTR}\\
+\type{\bTR \bTD 100.000,00\eTD \bTD 1,0 \eTD \bTD 100.000,00\eTD \bTD 1,0 \eTD \eTR}\\
+\type{\bTR \bTD 10.000,00 \eTD \bTD 10,0 \eTD \bTD 10.000,00 \eTD \bTD 10,0 \eTD \eTR}\\
+\type{\bTR \bTD 100,00 \eTD \bTD 1,00 \eTD \bTD 100,00 \eTD \bTD 1,00 \eTD \eTR}\\
+\type{\bTR \bTD 10 \eTD \bTD 10,00 \eTD \bTD 10 \eTD \bTD 10,00 \eTD \eTR}\\
+\type{\eTABLE}\\
+
+\blank[3cm]
+
+{
+\setupTABLE[
+	frame=off,
+	]
+\setupTABLE[column][first][
+	leftframe=on,
+	]
+\setupTABLE[column][last][
+	rightframe=on,
+	]
+\setupTABLE[row][first][
+	topframe=on,
+	]
+\setupTABLE[row][first,last][
+	bottomframe=on,
+	]
+\setupTABLE[column][1][
+	alignmentcharacter={.},
+	aligncharacter=yes,
+	align=middle,
+	]
+\setupTABLE[column][2][
+	alignmentcharacter={,},
+	aligncharacter=yes,
+	align=middle,
+	]
+\bTABLE
+\bTR\bTH first \eTH\bTH second \eTH\bTH third \eTH\bTH fourth\eTH\eTR
+\bTR\bTD 100.000,00\eTD\bTD 1,0 \eTD\bTD 100.000,00\eTD\bTD 1,0 \eTD\eTR
+\bTR\bTD 10.000,00 \eTD\bTD 10,0 \eTD\bTD 10.000,00 \eTD\bTD 10,0 \eTD\eTR
+\bTR\bTD 100,00 \eTD\bTD 1,00 \eTD\bTD 100,00 \eTD\bTD 1,00 \eTD\eTR
+\bTR\bTD 10 \eTD\bTD 10,00 \eTD\bTD 10 \eTD\bTD 10,00 \eTD\eTR
+\eTABLE
+}
+
+\Topic[mr]{Manuales y referencias}
+
+\goto{Entrada principal}[url(https://wiki.contextgarden.net/TABLE)] de la wiki.
+
+\blank
+
+\goto{Manual}[url(http://dl.contextgarden.net/myway/NaturalTables.pdf)], por Willi Egger.
+
+\blank
+
+\goto{Ejemplos varios}[url(http://www.pragma-ade.com/general/manuals/enattab.pdf)], por Pragma-ade.
+
+
+
+
+\stoptext

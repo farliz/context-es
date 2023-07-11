@@ -1,0 +1,272 @@
+\usebtxdataset[references.bib]
+\usebtxdefinitions[apa]
+\setupbtx[apa:cite][etallimit=3,etaldisplay=1]
+
+
+\usemodule[pre-01]
+\mainlanguage[es]
+\usemodule[chart]
+%\showframe
+\setupcolors[state=start]
+\definelayer[LogoUTM]
+\setupbodyfont[cmr,13pt]
+\setuptype[color=blue]
+\setuphead[subject][
+		style=\bfb
+		]
+\setuplayout[
+		backspace=0.5cm,
+		width=17.5cm,
+		textwidth=16.25cm,
+		]
+\setupinteraction[
+		state=start,
+		color=middlecyan,
+		style=\bf\ss
+		]
+\def\BIBTEX{Bib\TEX}
+\setupwhitespace[medium]
+
+\starttext
+\StartTitlePage
+  \CONTEXT ~~\&~~TeXworks\\  
+{\tfxx
+\goto{http://wiki.contextgarden.net}[url(http://wiki.contextgarden.net)]}
+\blank
+Taller 04
+\blank
+Bibliografía
+\blank[1cm]
+\CONTEXT -ec
+
+{
+\setupTABLE[frame=off]
+\bTABLE
+\bTR
+	\bTD[width=13.5cm]
+{\externalfigure[figures/utm_logo][width=2.5cm]}
+	\eTD
+	\bTD
+{\externalfigure[figures/context_logo][width=2.5cm]}
+	\eTD
+	\eTR
+\eTABLE
+}
+\StopTitlePage 
+
+\Topics{Contenido}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Topic[gen]{Generalidades}
+
+\startitemize
+	\item \CONTEXT~ adopta el formato \BIBTEX~ para gestionar la bibliografía. Información detallada acerca de este formato se puede encontrar en \goto{bibtex.org}[url(http://www.bibtex.org/)]
+	\item La base de datos bibliográfica se almacena en un archivo de extensión {\bf .bib}, a manera de entradas.
+	\item Si un documento incluye referencias, debe especificarse el archivo contenedor de la base de datos, así como otros detalles de estilo mediante los siguientes comandos:
+\stopitemize
+
+{\tfa
+\type{\usebtxdataset[referencias.bib]}\\
+\type{\usebtxdefinitions[apa]}\\
+\type{\setupbtx[apa:cite][etallimit=2, etaldisplay=1]}\\
+}
+
+\startitemize
+	\item Para insertar la lista de publicaciones citadas se emplea el siguiente comando:
+\stopitemize
+
+{\tfa
+\type{\placelistofpublications}
+}
+
+{\externalfigure[figures/bib_file][width=15cm]}
+
+\Topic[entradas]{Entradas bibliográficas}
+
+\startitemize
+	\item Una entrada bibliográfica se compone de varios elementos, además de una estructura específica: especificación del tipo de documento, identificador y variables. 
+	\item La sintaxis de las entradas es la siguiente:
+\stopitemize
+
+\blank[big]
+
+{\tta
+@especificación\{identificador,\\
+	variable1 = \{detalle\},\\
+	variable2 = \{detalle\},\\
+	variable3 = \{detalle\},\\
+\}}
+
+\page
+
+\subject{Artículo científico}
+
+{\tta
+@article\{rodriguez2017,\\
+doi     = \{10.33936/riemat.v2i2.1143\},\\
+year    = \{2017\},\\
+volume  = \{2\},\\
+number  = \{2\},\\
+pages   = \{1--5\},\\
+author  = \{Rodríguez, M. and Vázquez, A. and Saltos, W.M. and Ramos, J.\},\\
+title   = \{El potencial solar y la generación distribuida en la provincia de Manabí en el Ecuador\},\\
+journal = \{Revista de Investigaciones en Energía, Medio Ambiente y Tecnología\},\\
+\}}
+
+\page
+
+\subject{Libro}
+
+{\tta
+@book\{arias2003,\\
+	title     = \{Periferias y nueva ciudad: el problema del paisaje en los procesos de dispersión urbana\},\\
+	edition   = \{1\},\\
+	author    = \{Arias, P.\},\\
+	year      = \{2003\},\\
+	publisher = \{Universidad de Sevilla\},\\
+	address   = \{Sevilla\},\\
+\}}
+
+
+\page
+
+\subject{Colección (Un libro en el cual cada capítulo tiene sus propios autores)}
+
+{\tta
+@incollection\{buroz1987,\\
+	title     = \{Estudios Ambientales: Revisión de conceptos, metodología y presentación de resultados\},\\
+	booktitle = \{Planificación Ambiental, una visión de conjunto\},\\
+	edition   = \{1\},\\
+	author    = \{Buroz, E.\},\\
+	year      = \{1987\},
+	publisher = \{Universidad Simón Bolívar and LAGOVEN, filial de Petróleos de Venezuela\},\\
+	address   = \{Venezuela\}\\
+\}
+}
+
+\page
+
+\subject{Tesis}
+
+{\tta
+@mastersthesis\{corral2015,\\
+  title  = \{Influencia del uso de suelo en el aprovechamiento de recursos naturales de la micro-cuenca del río Carrizal. Caso Julián y Severino\},\\
+  author = \{Corral, G.M.\},\\
+  school = \{ESPAM MFL\}\\
+  year   = \{2015\}\\
+\}\\
+
+\blank
+
+@phdthesis\{santos2017,\\
+	title  = \{Metodología para el cálculo del límite de potencia eólica (LPE) en sistemas eléctricos débiles y distribuidos\},\\
+	author = \{Santos, A.\},\\
+	school = \{Universidad Tecnológica de La Habana\},\\
+	year   = \{2017\}\\
+\}\\
+}
+
+\page
+
+\subject{Reporte técnico}
+
+{\tta
+@techreport\{MORA2003,\\
+	title = \{Perturbaciones en la onda de tensión: Huecos [sag] y Sobretensiones [swell]\},\\
+	author = \{Mora, J.J.\},\\
+	institution = \{Universidad de Girona\},\\
+	year = \{2003\},\\
+	address = \{Girona\},\\
+	url = \{http://eia.udg.es/~secse/curso_calidad/curso4-huecosdetension.pdf\}\\
+\}\\
+}
+
+\page
+
+\subject{Misceláneos (sitios web, manuales, periódicos, entre otros)}
+
+{\tta
+@misc\{guzman2018,\\
+	author = \{Guzmán, J.\},\\
+	year   = \{2018\},\\
+	title  = \{¿Cómo se transforma el bagazo de caña de azúcar a energía eléctrica?. elsalvador.com\},\\
+	url    = \{https://www.elsalvador.com/noticias/negocios/como-se-transforma-el-bagazo-de-cana-de-azucar-a-energia-electrica/439746/2018/\}\\
+\}\\
+}
+
+\Topic[citas]{Citas}
+
+\startitemize
+	\item Las citas se realizan mediante el comando:
+\stopitemize
+
+
+{\tfb \type{\cite[tipo][identificador]}}
+
+\blank
+
+El tipo determina cómo se mostrará la cita en el texto. Dependiendo del contexto y el estilo de redacción se preferirá uno u otro. A continuación algunos ejemplos:
+
+\blank
+
+{
+\setupTABLE[frame=off]
+\setupTABLE[r][first,last][bottomframe=on]
+\setupTABLE[r][first][style=\bfa]
+\setupTABLE[c][even][align=middle,style=\tfa]
+\setupTABLE[c][odd][align=middle,style=\tfa]
+\bTABLE
+\bTR \bTD[width=4cm] Tipo \eTD \bTD[width=4cm] Ejemplo       \eTD \eTR
+\bTR \bTD authoryear   \eTD \bTD (Arias, 2003) \eTD \eTR
+\bTR \bTD year         \eTD \bTD (2003)        \eTD \eTR
+\bTR \bTD authoryears  \eTD \bTD Arias (2003)  \eTD \eTR
+\eTABLE
+}
+
+\page
+
+\subject{Ejemplos}
+
+{\tfa
+\type{El cambio climático es causado, en su mayoría, por ciertas actividades antrópicas \cite[authoryear][gomez2015].}
+}
+
+\blank
+
+Da como resultado:
+
+\blank
+
+{\tfa
+El cambio climático es causado, en su mayoría, por ciertas actividades antrópicas \cite[authoryear][gomez2015].
+}
+
+
+\page
+
+{\tfa
+\type{Según \cite[authoryears][gomez2015], el cambio climático es causado, en su mayoría, por ciertas actividades antrópicas.}
+}
+
+\blank
+
+Da como resultado:
+
+\blank
+
+{\tfa
+Según \cite[authoryears][gomez2015], el cambio climático es causado, en su mayoría, por ciertas actividades antrópicas.
+}
+
+\blank[2cm]
+
+\subject{Bibliografía}
+\placelistofpublications
+
+\Topic[ref]{Referencias}
+
+\goto{Manual}[url(https://modules.contextgarden.net/cgi-bin/module.cgi/action=find/name=bibman)] del módulo Bib, por Taco Hoekwater.
+
+\blank
+
+\goto{Entrada principal}[url(https://wiki.contextgarden.net/Bibliography)] de la Wiki.
